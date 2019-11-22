@@ -92,6 +92,7 @@ class Authenticate:
 
         label = Label(self.loginFrame, text="Username", font=self.label, bg=self.colour)
         self.fieldUsername = Entry(self.loginFrame, textvariable=self.username)
+        self.fieldUsername.focus()
 
         label.grid(row=1, column=0, sticky=E)
         self.fieldUsername.grid(row=1, column=1, sticky=W)
@@ -133,6 +134,7 @@ class Authenticate:
 
         label = Label(self.loginFrame, text="Username", font=self.label, bg=self.colour)
         self.fieldUsername = Entry(self.loginFrame, textvariable=self.username)
+        self.fieldUsername.focus()
 
         label.grid(row=1, column=0, sticky=E)
         self.fieldUsername.grid(row=1, column=1, sticky=W)
@@ -224,6 +226,9 @@ class Game():
 
         self.scoreLabel = Label(self.canvas, text="Score: 0", font=self.label, bg=self.colour, width=20)
         self.scoreLabel.grid(row=1, column=1, sticky="E", padx=5)
+
+        self.instructionsLabel = Label(self.canvas, text="Please guess the name of the song and type it in the boxes below.\nIf the input does not automatically advance, press TAB.", font=self.label, bg=self.colour, wraplength=350)
+        self.instructionsLabel.grid(columnspan=2)
 
         self.statusLabel = Label(self.canvas, text="", font=self.label, bg=self.colour, width=40)
         self.statusLabel.grid(columnspan=2)
